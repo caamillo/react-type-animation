@@ -6,6 +6,7 @@ export async function type(
   speed: number,
   deletionSpeed: number,
   omitDeletionAnimation: boolean,
+  onFinish: Function,
   ...args: any
 ) {
   for (const arg of args) {
@@ -23,6 +24,7 @@ export async function type(
         await arg;
     }
   }
+  onFinish()
 }
 
 async function edit(

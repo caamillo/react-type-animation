@@ -14,6 +14,7 @@ interface Props {
   speed?: Speed | GranularSpeed;
   deletionSpeed?: Speed | GranularSpeed;
   omitDeletionAnimation?: boolean;
+  onFinish?: Function;
 }
 
 export type GranularSpeed = {

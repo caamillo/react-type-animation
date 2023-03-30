@@ -20,7 +20,8 @@ const TypeAnimation = forwardRef<
       omitDeletionAnimation = false,
       wrapper = 'span',
       cursor = true,
-      style
+      style,
+      onFinish = () => {}
     },
     ref
   ) => {
@@ -81,6 +82,7 @@ const TypeAnimation = forwardRef<
         keyStrokeDelayTyping,
         keyStrokeDelayDeleting,
         omitDeletionAnimation,
+        onFinish,
         ...seq,
         tl
       );
